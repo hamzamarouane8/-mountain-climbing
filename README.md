@@ -1,12 +1,17 @@
 
-## APPLICATION FRONT
+## Climbing-Hieghts App
 
-Ce projet contient le frontend web du application 'clothing'.
-Il s'agit d'une application NodeJS/React.
+This is an E-Commerce App for climbing heights. I started this Project out of cusiosity and absoulutely no vision but now it have eveolve to full size Shopping App. This repos hold basic E-commerce App POC which I had started 1 week ago. You I also willing to integrate PWA web App for the this project. If you are interested feel free to Ping me.
 
-### React
+## Technologies
 
-Le projet React requiert l'installation de Python 27 (https://www.python.org/download/releases/2.7/).
-Python est requis du fait de la dépendances node-sass (utilisée pour la gestion des feuilles de styles SCSS).
-Lors de l'installation Python il est important de garder le chemin par défaut proposé: C:\Python27.
-
+i used for this project :
+- react hooks and react Context-API 
+- styled-components 
+- sass 
+- react-router-dom 
+- lerna 
+- nightwatch for test 
+- react-apexcharts 
+- ui-material 
+- seamntic-ui-react
