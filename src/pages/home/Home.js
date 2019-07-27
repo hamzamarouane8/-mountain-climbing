@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeroSlider, ServiceGridSlider ,HeroBanner} from "../../features/home";
+import {HeroSlider, ServiceGridSlider ,HeroBanner,Overview,Brands} from "../../features/home";
 import NavBar from '../../components/navbar';
 
 //------------------------------------------------------------------
@@ -19,6 +19,12 @@ export default ({}) => {
 
       {/* Service grid slider */}
       <ServiceGridSlider />
+
+      {/* Discount Section */}
+      <Overview />
+
+      {/* Brands Section */}
+      <Brands />
     </>
   )
 }

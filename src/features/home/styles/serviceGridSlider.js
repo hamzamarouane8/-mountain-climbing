@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
 export const CarousselContent = styled.div`
+.service-grid-slider-area {
+    width: 90%;
+    margin-left: auto;
+        margin-right: auto;
+    margin-top: 80px!important;
+
+    &__content {
+        text-align:center;
+        margin-bottom:40px;
+    }
+}
 .section-title-area {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -74,6 +85,30 @@ export const CarousselContent = styled.div`
                 color: #f0542d;
             }
         }
+    }
+}
+${'/* Item of slider */'}
+.single-aboss-product {
+    border: 1px solid #efefef;
+    margin-left: 10px;
+}
+
+.pro-grid-item__content {
+    font-size: 16px;
+    padding: 20px 30px;
+    h3 {
+        color: #23252a;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 13px;
+    }
+    h3 a {
+        color: #23252a;
+    }
+    .pro-home-price {
+        font-size: 19px;
+        font-weight: 600;
+        color: #666666;
     }
 }
 `

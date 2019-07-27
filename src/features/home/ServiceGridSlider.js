@@ -11,25 +11,31 @@ import {withRouter} from 'react-router-dom';
 
 let data = [
   {
-   // img: require('../../assets/img/service1.jpg'),
+    img: require('../../assets/img/services/p11.jpg'),
     productTitle: 'Dorji bari East Long Style',
     productPrice: '$199.99',
     productUrl: 'dresses'
   },
   {
-    img: require('../../assets/img/service2.jpg'),
+    img: require('../../assets/img/services/p5.jpg'),
+    productTitle: 'Dorji bari East Long Style',
+    productPrice: '$199.99',
+    productUrl: 'dresses'
+  },
+  {
+    img: require('../../assets/img/services/p6.jpg'),
     productTitle: 'Dorji bari East Long Style',
     productPrice: '$199.99',
     serviceUrl: 'service-details-left-sidebar'
   },
   {
-    img: require('../../assets/img/service3.jpg'),
+    img: require('../../assets/img/services/p9.jpg'),
     productTitle: 'Dorji bari East Long Style',
     productPrice: '$199.99',
     serviceUrl: 'service-details-left-sidebar'
   },
   {
-    img: require('../../assets/img/service4.jpg'),
+    img: require('../../assets/img/services/p10.jpg'),
     productTitle: 'Dorji bari East Long Style',
     productPrice: '$199.99',
     serviceUrl: 'service-details-left-sidebar'
@@ -41,8 +47,10 @@ export default withRouter(({history,match}) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    centerMode: true,
+
   }
 
   function handleClick(link){
@@ -52,8 +60,11 @@ export default withRouter(({history,match}) => {
   return (
     <CarousselContent>
       {/*====================  service grid slider area ====================*/}
-      <div className="service-grid-slider-area">
-
+      <div className="service-grid-slider-area pt-50 pb-90">
+        <div className="service-grid-slider-area__content">
+        <h1>Featured Products</h1>
+        <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
             <div className="service-slider">
               <Slider {...settings}>
                 {(data || []).map(item => (
@@ -69,8 +80,8 @@ export default withRouter(({history,match}) => {
 })
 
 const SliderItem = ({item,onClick}) => (
-  <div className="single-aboss-product" onClick={onClick}>
-    <div className="pro-grid-item__image">
+  <div className="single-aboss-product" >
+    <div className="pro-grid-item__image" >
       <div className="pro-grid-item__image-wrapper">
         <a href={null}>
           <img src={item.img} className="img-fluid" alt=""/>
@@ -78,7 +89,7 @@ const SliderItem = ({item,onClick}) => (
       </div>
     </div>
     <div className="pro-grid-item__content">
-      <h3 className="pro-grid-item__title">
+      <h3 className="pro-grid-item__title" onClick={onClick}>
         <a href="#">{item.productTitle}</a>
       </h3>
       <div className='pro-price-cart'>
