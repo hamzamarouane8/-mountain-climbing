@@ -21,12 +21,26 @@ h1,h2,h3,h4,h5,h5{
   background-size: cover;
 }
 
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0
+}
+
 .pt-50 {
   padding-top: 50px;
 }
 
 .pb-90 {
   padding-bottom: 90px;
+}
+
+.pt-82 {
+  padding-top: 82px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
 }
 
 .pt-80 {

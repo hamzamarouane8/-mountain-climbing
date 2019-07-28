@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeroSlider, ServiceGridSlider ,HeroBanner,Overview,Brands} from "../../features/home";
+import {HeroSlider, ServiceGridSlider ,HeroBanner,Overview,Brands,Footer} from "../../features/home";
 import NavBar from '../../components/navbar';
 
 //------------------------------------------------------------------
@@ -25,6 +25,9 @@ export default ({}) => {
 
       {/* Brands Section */}
       <Brands />
+
+      {/* Footer Section */}
+      <Footer />
     </>
   )
 }

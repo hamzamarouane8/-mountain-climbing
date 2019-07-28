@@ -1,105 +1,91 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 
+//-----------------------------------------------
+
+const assets= {
+  logo: require('../../assets/img/gander-outdoors-logo-dribbble.jpg')
+}
 export default ({}) => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <NavBarStyled>
       {/*====================  header area ====================*/}
-      <div className="header-area header-sticky header-sticky--default">
-        <div className="header-area__desktop header-area__desktop--default">
-          {/*====================  header top bar ====================*/}
-          <div className="header-info-area">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="header-info-wrapper">
-                    {/* logo */}
-                    <div className="logo">
-                      <a href="#" >
-                      <img src="assets/img/logo/logo.svg" className="img-fluid" alt="Logo" />
-                      </a>
-                    </div>
-                    {/* header contact info */}
-                    <div className="header-contact-info">
-                      <div className="header-info-single-item">
-                        <div className="header-info-single-item__icon">
-                          <i className="zmdi zmdi-spartphone-android" />
-                        </div>
-                        <div className="header-info-single-item__content">
-                          <h6 className="header-info-single-item__title">Phone</h6>
-                          <p className="header-info-single-item__subtitle">98 764 7463</p>
-                        </div>
-                      </div>
-                      <div className="header-info-single-item">
-                        <div className="header-info-single-item__icon">
-                          <i className="zmdi zmdi-spartphone-home" />
-                        </div>
-                        <div className="header-info-single-item__content">
-                          <h6 className="header-info-single-item__title">Adress</h6>
-                          <p className="header-info-single-item__subtitle">Your adress goes here</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/*====================  End of header top bar ====================*/}
-        </div>
-      </div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/"><img src={assets.logo} alt=''/></NavbarBrand>
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="" navbar>
+              <NavItem>
+                <NavLink href="/home">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/travel">Travel</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/shope">Shop</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/blog">Blog</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/contact">Contact</NavLink>
+              </NavItem>
+            </Nav>
+            <Nav className="ml-auto" navbar>
+              <NavItem className='user-connect'>
+                <NavLink href="/home">login</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+
       {/*====================  End of header area  ====================*/}
+
     </NavBarStyled>
   )
 }
 
 const NavBarStyled = styled.div`
-.header-area{
-    background-color: #fff;
-    &__desktop{
-            .header-contact-info{
-                display: flex;
-                justify-content: flex-end;
-            }
+.user-connect > a {
+    background-color :#fff!important;
+    border: 1px solid #000 !important;
+    padding: 12px 30px!important;
+}
+.user-connect > a:hover {
+    background-color :#000!important;
+    padding: 12px 30px!important;
+    color: #fff!important;
+}
+.bg-light {
+    background-color: #fff !important;
+    padding: 20px 30px;
+}
+.navbar-brand{
+    img {
+        max-width:40%;
+    height:auto;
     }
 }
-.header-info-area {
-  padding: 35px 0;
-}
 
-.header-info-wrapper {
-  display: flex;
-  .logo {
-    width: 280px;
-    flex-basis: 280px;
-  }
-  .header-contact-info {
-    width: calc(100% - 280px);
-  }
-}
-
-.header-info-single-item {
-  display: flex;
-  justify-content: flex-end;
-  &__icon {
-  color: #f0542d;
-  vorder: 1px solid #f0542d;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      text-align: center;
-      margin-right: 15px;
-      i {
-        line-height: 50px;
-        font-size: 26px;
-      }
-  }
-  
-  &__title {
-      font-size: 18px;
-      line-height: 1.5;
-      margin-bottom: 0;
-      font-weight: 500;
-  }
+.nav-item {
+padding: 0px !important;
+      margin-left: 30px;
+    & > a {
+    color: #000!important;
+    font-size: 18px;
+    font-weight: 500;
+    }
 }
 `
